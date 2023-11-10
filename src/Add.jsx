@@ -139,19 +139,19 @@ function Add() {
             </div>
           </div>
           <div className="main-bill-header flex text-center">
-            <div className="srno border-x-2 border-black w-52 px-3 py-2">
+            <div className="srno border-2 border-black w-52 px-3 py-2">
               <p className="text-sm font-bold">Sr.No.</p>
             </div>
-            <div className="p-name font-bold border-x-2 border-black w-full px-3 py-2">
+            <div className="p-name font-bold border-2 border-black w-full px-3 py-2">
               <p>Product</p>
             </div>
-            <div className="qty font-bold border-x-2 border-black w-52 px-3 py-2">
+            <div className="qty font-bold border-2 border-black w-52 px-3 py-2">
               <p>QTY</p>
             </div>
-            <div className="rate font-bold border-x-2 border-black w-72 px-3 py-2">
+            <div className="rate font-bold border-2 border-black w-72 px-3 py-2">
               <p>Rate</p>
             </div>
-            <div className="total font-bold border-x-2 border-black w-full px-3 py-2">
+            <div className="total font-bold border-2 border-black w-full px-3 py-2">
               <p>Total</p>
             </div>
           </div>
