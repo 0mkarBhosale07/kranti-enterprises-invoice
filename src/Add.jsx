@@ -158,19 +158,19 @@ function Add() {
 
           {items.map((item, index) => (
             <div className="main-bill-header flex text-center" key={index}>
-              <div className="srno border border-black w-52 px-3 py-2">
+              <div className="srno border-x-2 border-black w-52 px-3 py-2">
                 <p className="text-sm font-bold">{index + 1}</p>
               </div>
-              <div className="p-name border border-black w-full px-3 py-2">
+              <div className="p-name border-x-2 border-black w-full px-3 py-2">
                 <p>{item.productName}</p>
               </div>
-              <div className="qty border border-black w-52 px-3 py-2">
+              <div className="qty border-x-2 border-black w-52 px-3 py-2">
                 <p>{item.quantity}</p>
               </div>
-              <div className="rate border border-black w-72 px-3 py-2">
+              <div className="rate border-x-2 border-black w-72 px-3 py-2">
                 <p>₹ {item.price}</p>
               </div>
-              <div className="total border border-black w-full px-3 py-2">
+              <div className="total border-x-2 border-black w-full px-3 py-2">
                 <p>₹ {item.quantity * item.price}</p>
               </div>
             </div>
