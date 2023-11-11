@@ -50,7 +50,7 @@ function Add() {
     const element = document.getElementById("pdf-content");
 
     if (element) {
-      html2pdf().from(element).save("invoice.pdf");
+      html2pdf().from(element).save(`${customerDetails.customerName}-bill.pdf`);
     } else {
       console.error("Element not found.");
     }
