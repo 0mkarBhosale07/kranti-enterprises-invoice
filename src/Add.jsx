@@ -2,6 +2,16 @@ import { useState } from "react";
 import html2pdf from "html2pdf.js";
 
 function Add() {
+  const [customerDetails, setCustomerDetails] = useState({
+    customerName: "",
+    customerAddress: "",
+  });
+
+  const [shippingDetails, setShippingDetails] = useState({
+    shippingName: "",
+    shippingAddress: "",
+  });
+
   const [items, setItems] = useState([
     { productName: "", quantity: 1, price: 0, totalPrice: 0 },
   ]);
@@ -50,6 +60,76 @@ function Add() {
     <div>
       <div className="main text-center text-2xl font-bold my-3">
         Kranti Enterprises
+      </div>
+      <div className="details">
+        <div className="grid text-center p-5 mb-2">
+          <label>
+            Customer Name:
+            <input
+              type="text"
+              placeholder="Product Name"
+              className="border border-black rounded-md mx-2 px-2 mb-2"
+              name="customerName"
+              value={customerDetails.customerName}
+              onChange={(e) =>
+                setCustomerDetails({
+                  ...customerDetails,
+                  customerName: e.target.value,
+                })
+              }
+            />
+          </label>
+          <label>
+            Customer Address:
+            <input
+              type="text"
+              placeholder="Product Name"
+              className="border border-black rounded-md mx-2 px-2"
+              name="customerAddress"
+              value={customerDetails.customerAddress}
+              onChange={(e) =>
+                setCustomerDetails({
+                  ...customerDetails,
+                  customerAddress: e.target.value,
+                })
+              }
+            />
+          </label>
+        </div>
+        <div className="grid text-center p-5 mb-2">
+          <label>
+            Shipping Name:
+            <input
+              type="text"
+              placeholder="Product Name"
+              className="border border-black rounded-md mx-2 px-2 mb-2"
+              name="shippingName"
+              value={shippingDetails.shippingName}
+              onChange={(e) =>
+                setShippingDetails({
+                  ...shippingDetails,
+                  shippingName: e.target.value,
+                })
+              }
+            />
+          </label>
+          <label>
+            Shipping Address:
+            <input
+              type="text"
+              placeholder="Product Name"
+              className="border border-black rounded-md mx-2 px-2"
+              name="shippingAddress"
+              value={shippingDetails.shippingAddress}
+              onChange={(e) =>
+                setShippingDetails({
+                  ...shippingDetails,
+                  shippingAddress: e.target.value,
+                })
+              }
+            />
+          </label>
+        </div>
       </div>
       {items.map((item, index) => (
         <div key={index} className="grid text-center p-5">
@@ -124,18 +204,38 @@ function Add() {
           </div>
           <div className="details flex">
             <div className="border border-black w-full px-3 py-2">
-              <p>Name:</p>
+              <p>
+                Name:{" "}
+                <span className="font-bold">
+                  {customerDetails.customerName}
+                </span>{" "}
+              </p>
             </div>
             <div className="border border-black w-full px-3 py-2">
-              <p>Name:</p>
+              <p>
+                Name:{" "}
+                <span className="font-bold">
+                  {shippingDetails.shippingName}
+                </span>{" "}
+              </p>
             </div>
           </div>
           <div className="details flex">
             <div className="border border-black w-full px-3 py-2">
-              <p>Address:</p>
+              <p>
+                Address:{" "}
+                <span className="font-bold">
+                  {customerDetails.customerAddress}
+                </span>{" "}
+              </p>
             </div>
             <div className="border border-black w-full px-3 py-2">
-              <p>Address:</p>
+              <p>
+                Address:{" "}
+                <span className="font-bold">
+                  {shippingDetails.shippingAddress}
+                </span>{" "}
+              </p>
             </div>
           </div>
           <div className="main-bill-header flex text-center">
